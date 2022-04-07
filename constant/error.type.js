@@ -10,8 +10,23 @@ module.exports = {
     result: "",
   },
   userRegisterError: {
-    code: '10003',
-    message: '用户注册错误',
-    result: '',
+    code: "10003",
+    message: "用户注册错误",
+    result: "",
+  },
+  userDoesNotExist: {
+    code: "10004",
+    message: "用户不存在",
+    result: "",
+  },
+  userLoginError: {
+    code: "10005",
+    message: "用户登录失败",
+    result: "",
+  },
+  invalidPassword: {
+    code: "10006",
+    message: "密码不匹配",
+    result: "",
   },
 };

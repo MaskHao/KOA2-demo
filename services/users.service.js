@@ -10,12 +10,12 @@ module.exports = {
   },
   getUserInfo: async (params) => {
     try {
-      const data = await UserModel.findAll({
+      const data = await UserModel.findOne({
         where: {
           ...params,
         },
       });
-      return data || [];
+      return data ;
     } catch (error) {
       throw "error";
     }

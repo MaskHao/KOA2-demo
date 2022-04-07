@@ -23,8 +23,23 @@ const getUserInfo = async (ctx, next) => {
     ctx.body = error;
   }
 };
-
+const login = async (ctx, next) => {
+  const { username } = ctx.request.body;
+  try {
+    const data = await UsersService.getUserInfo({ username });
+    ctx.body = {
+      success: true,
+      code: 200,
+      data,
+      message: "登录成功",
+    };
+  } catch (error) {
+    ctx.app.emit("error", userAlreadyExited, ctx);
+    return false;
+  }
+};
 module.exports = {
   register,
   getUserInfo,
+  login,
 };
