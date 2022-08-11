@@ -21,5 +21,5 @@ article.post("/form", async (ctx, next) => {
   // const data = await parsePostData(ctx);
   // ctx.body = data;
   ctx.body = ctx.request.body;
-}); 
+});
 module.exports = article;

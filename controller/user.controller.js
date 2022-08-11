@@ -52,7 +52,7 @@ const changePwd = async (ctx, next) => {
     const changeState = await UsersService.updateUser({ id, password });
     ctx.body = {
       success: changeState,
-      code: 200,
+      code: changeState ? 200 : "1007",
       message: `修改${changeState ? "成功" : "失败"}`,
     };
   } catch (error) {}
