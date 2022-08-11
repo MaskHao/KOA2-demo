@@ -1,4 +1,4 @@
 node_modules/
 .history/
 .vscode/
-# script/index.js
+script/index.js
